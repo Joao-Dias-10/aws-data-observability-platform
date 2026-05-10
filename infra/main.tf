@@ -5,7 +5,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "sla-tfstate-bucket"   # atualize para o seu bucket de estado
+    bucket = "tfstate-sla-data-platform-dev-jpd"   # atualize para o seu bucket de estado
     key    = "sla-platform/terraform.tfstate"
     region = "us-east-1"
   }
