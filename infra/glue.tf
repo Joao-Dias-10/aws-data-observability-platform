@@ -75,7 +75,7 @@ resource "aws_glue_job" "pipeline" {
 
   # G.025X é o menor worker disponível — suficiente para dados de portfólio
   # Em prod com volume real, escalar para G.1X ou G.2X
-  worker_type       = var.environment == "prod" ? "G.1X" : "G.025X"
+  worker_type = var.environment == "prod" ? "G.2X" : "G.1X"
   number_of_workers = var.environment == "prod" ? 4 : 2
 
   default_arguments = {
